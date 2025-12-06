@@ -1,3 +1,4 @@
 .claude/settings.local.json
 history/
 specs/
+node_modules
