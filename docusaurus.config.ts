@@ -8,15 +8,15 @@ const config: Config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://MariaMohsin.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/hackathon-book/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'your-organization',
-  projectName: 'your-project-name',
+  organizationName: 'MariaMohsin',
+  projectName: 'hackathon-book',
 
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
@@ -37,13 +37,13 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           // Please change this to your repo. For example: https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/docs',
+            'https://github.com/MariaMohsin/hackathon-book/tree/main/packages/create-docusaurus/docs',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo. For example: https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/blog',
+            'https://github.com/MariaMohsin/hackathon-book/tree/main/packages/create-docusaurus/blog',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -69,7 +69,7 @@ const config: Config = {
           label: 'Book',
         },
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/MariaMohsin/hackathon-book',
           label: 'GitHub',
           position: 'right',
         },
@@ -109,7 +109,7 @@ const config: Config = {
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/MariaMohsin/hackathon-book',
             },
           ],
         },
