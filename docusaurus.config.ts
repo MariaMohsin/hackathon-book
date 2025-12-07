@@ -37,13 +37,13 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           // Please change this to your repo. For example: https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/
           editUrl:
-            'https://github.com/MariaMohsin/hackathon-book/tree/main/packages/create-docusaurus/docs',
+            'https://github.com/MariaMohsin/hackathon-book/main/packages/create-docusaurus/docs',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo. For example: https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/
           editUrl:
-            'https://github.com/MariaMohsin/hackathon-book/tree/main/packages/create-docusaurus/blog',
+            'https://github.com/MariaMohsin/hackathon-book/main/packages/create-docusaurus/blog',
         },
         theme: {
           customCss: './src/css/custom.css',
