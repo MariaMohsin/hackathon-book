@@ -8,7 +8,7 @@ const config: Config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://MariaMohsin.github.io',
+  url: 'https://ai-native-book.vercel.app',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -16,7 +16,7 @@ const config: Config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'MariaMohsin',
-  projectName: 'hackathon-book',
+  projectName: 'ai-native-book',
 
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
@@ -37,13 +37,13 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           // Please change this to your repo. For example: https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/
           editUrl:
-            'https://github.com/MariaMohsin/hackathon-book/main/packages/create-docusaurus/docs',
+            'https://github.com/MariaMohsin/hackathon-book/tree/main/docs',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo. For example: https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/
           editUrl:
-            'https://github.com/MariaMohsin/hackathon-book/main/packages/create-docusaurus/blog',
+            'https://github.com/MariaMohsin/hackathon-book/tree/main/blog',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -69,7 +69,7 @@ const config: Config = {
           label: 'Book',
         },
         {
-          href: 'https://github.com/MariaMohsin/hackathon-book',
+          href: 'https://github.com/MariaMohsin/ai-native-book',
           label: 'GitHub',
           position: 'right',
         },
@@ -109,12 +109,12 @@ const config: Config = {
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/MariaMohsin/hackathon-book',
+              href: 'https://github.com/MariaMohsin/ai-native-book',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} ai-native-book. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

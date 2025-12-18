@@ -41,4 +41,24 @@ Thumbs.db
 # Docusaurus specific
 .history/
 
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv/
+env.bak/
+venv.bak/
+.python-version
+.spyproject/
+.ropeproject/
+.pytest_cache/
+.coverage
+htmlcov/
+.pyre/
+.pytype/
 

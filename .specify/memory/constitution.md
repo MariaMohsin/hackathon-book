@@ -1,60 +1,55 @@
-<!--
-Sync Impact Report:
-Version change: 1.0.0 → 1.1.0
-Modified principles:
-- [PRINCIPLE_1_NAME] → Accuracy
-- [PRINCIPLE_2_NAME] → Simple, clear writing
-- [PRINCIPLE_3_NAME] → Practical-first
-- [PRINCIPLE_4_NAME] → AI-native
-- [PRINCIPLE_5_NAME] → Standards
-- [PRINCIPLE_6_NAME] → Workflow Rules
-Added sections: Constraints, Success Criteria, Anti-Goals
-Removed sections: None
-Templates requiring updates:
-- .specify/templates/plan-template.md: ✅ updated
-- .specify/templates/spec-template.md: ✅ updated
-- .specify/templates/tasks-template.md: ✅ updated
-- .specify/templates/commands/sp.constitution.md: ✅ updated
-- README.md: ⚠ pending (manual follow-up needed to ensure consistency)
-- docs/quickstart.md: ⚠ pending (manual follow-up needed to ensure consistency)
-Follow-up TODOs: None
--->
-# Write a technical book using Docusaurus + Claude Code + Spec-Kit Plus, deployed on GitHub Pages. Constitution
+# [PROJECT_NAME] Constitution
+<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
 
 ## Core Principles
 
-### Accuracy
-Every claim and piece of information MUST be verified with official documentation. No unverified claims or hallucinations are permitted.
+### [PRINCIPLE_1_NAME]
+<!-- Example: I. Library-First -->
+[PRINCIPLE_1_DESCRIPTION]
+<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
 
-### Simple, clear writing
-All content MUST be written at a Grade 8–10 reading level. Complex technical concepts should be explained in an easy-to-understand manner.
+### [PRINCIPLE_2_NAME]
+<!-- Example: II. CLI Interface -->
+[PRINCIPLE_2_DESCRIPTION]
+<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
 
-### Practical-first
-Every chapter MUST include commands, code, or examples that users can directly implement and run.
+### [PRINCIPLE_3_NAME]
+<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
+[PRINCIPLE_3_DESCRIPTION]
+<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
 
-### AI-native
-The book MUST demonstrate how Claude Code + Spec-Kit assist at each step of the technical writing and development process.
+### [PRINCIPLE_4_NAME]
+<!-- Example: IV. Integration Testing -->
+[PRINCIPLE_4_DESCRIPTION]
+<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
 
-### Standards
-Code must run exactly as written. Folder structures must match a real Docusaurus project. The Spec-Kit workflow (constitution → specs → drafts) MUST be used for chapters and tasks. Only official documentation should be cited. Consistent formatting, clean structure, and short paragraphs are required.
+### [PRINCIPLE_5_NAME]
+<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
+[PRINCIPLE_5_DESCRIPTION]
+<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
 
-### Workflow Rules
-All commands MUST be validated using Claude Code (CCR). Spec-Kit MUST be used for chapters and and tasks. The build MUST be tested locally before writing instructions. No unverified claims or made-up tools are allowed. Chapters MUST start with learning objectives.
+### [PRINCIPLE_6_NAME]
 
-## Constraints
 
-The book MUST contain 10–15 chapters plus a Preface. Each chapter must be 800–1500 words, with a total length of 12k–20k words. The book MUST be built in Docusaurus and deployed to GitHub Pages. All code blocks must explicitly specify their language (e.g., bash, ts).
+[PRINCIPLE__DESCRIPTION]
 
-## Success Criteria
+## [SECTION_2_NAME]
+<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
 
-The book builds without errors. GitHub Pages deploys successfully. All examples run on a fresh machine. The book maintains a consistent tone, clean formatting, and reproducible steps. The entire book MUST follow this constitution and all chapter specifications.
+[SECTION_2_CONTENT]
+<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
 
-## Anti-Goals
+## [SECTION_3_NAME]
+<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
 
-The book will NOT contain long theoretical explanations without practical examples. It will NOT include untested code. Inconsistent folder paths are NOT allowed. Wordy or academic writing styles are NOT permitted.
+[SECTION_3_CONTENT]
+<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
 
 ## Governance
+<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-This Constitution supersedes all other practices. Amendments require documentation, approval, and a migration plan. All PRs/reviews must verify compliance. Complexity must be justified. Use relevant guidance files for runtime development guidance.
+[GOVERNANCE_RULES]
+<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
 
-**Version**: 1.1.0 | **Ratified**: 2025-12-04 | **Last Amended**: 2025-12-04
+**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
+<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
