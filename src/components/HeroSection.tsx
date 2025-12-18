@@ -3,7 +3,7 @@ import styles from './HeroSection.module.css';
 import ChatWidget from '../theme/ChatbotWidget';
 export default function HeroSection() {
   return (
-    <div className={styles.hero}>
+    <div className={`${styles.hero} hero hero--primary`}>
       <div className={styles.gradientBg}></div>
       <div className={styles.floatingShapes}>
         <div className={styles.shape1}></div>
@@ -46,19 +46,19 @@ export default function HeroSection() {
         </div>
 
         <div className={styles.content}>
-          <h1 className={styles.title}>
+          <h1 className={`${styles.title} hero__title`}>
             Physical AI & <br />
             <span className={styles.gradient}>Humanoid Robotics</span>
           </h1>
-          <p className={styles.tagline}>
+          <p className={`${styles.tagline} hero__subtitle`}>
             Master the future of robotics with AI-powered intelligent systems
           </p>
 
           <div className={styles.buttonGroup}>
-            <a href="/docs/intro" className={styles.primaryBtn}>
+            <a href="/docs/intro" className={`${styles.primaryBtn} button button--secondary button--lg`}>
               Start Learning <span className={styles.arrow}>→</span>
             </a>
-            <a href="/docs/intro" className={styles.secondaryBtn}>
+            <a href="/docs/intro" className={`${styles.secondaryBtn} button button--outline button--secondary button--lg`}>
               Explore Docs
             </a>
           </div>
