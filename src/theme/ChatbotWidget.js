@@ -1,6 +1,6 @@
 import { useState } from 'react';
                       
-const API_BASE_URL = "https://mariamohsin-rag-baknd.hf.space/search";       
+const API_BASE_URL = "https://mariamohsin-rag-baknd.hf.space/index";       
 
 export default function ChatbotWidget() {
   const [isMinimized, setIsMinimized] = useState(true);
