@@ -49,18 +49,15 @@ export default function ChatbotWidget() {
     }
   };
 
-  const handleIndexContent = async () => {
-    const hasIndexedKey = localStorage.getItem('bookContentIndexed');
-    if (hasIndexedKey) {
-      setMessages(prev => [...prev, { id: Date.now(), text: "Book content is already indexed. To re-index, please clear the previous index first.", sender: 'bot' }]);
-      return;
-    }
+ const handleIndexContent = async () => {
+  // Remove previous index flag so we can re-index anytime
+  localStorage.removeItem('bookContentIndexed');
 
-    setMessages(prev => [...prev, { id: Date.now(), text: "Indexing book content... This may take a few moments.", sender: 'bot' }]);
-    setIsIndexing(true);
+  setMessages(prev => [...prev, { id: Date.now(), text: "Indexing book content... This may take a few moments.", sender: 'bot' }]);
+  setIsIndexing(true);
 
-    try {
-      const bookContent = `# Physical AI & Humanoid Robotics Book
+  try {
+    const bookContent = `# Physical AI & Humanoid Robotics Book
 
 ## Introduction
 This book covers various aspects of physical AI and humanoid robotics.
@@ -93,29 +90,29 @@ Sensors that detect movement and orientation.
 Cameras and computer vision systems for visual perception.
 `;
 
-      const response = await fetch(`${BACKEND_URL}/index`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          documents: [bookContent]  // Send as documents array for the /index endpoint
-        })
-      });
+    const response = await fetch(`${BACKEND_URL}/index`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        documents: [bookContent]  // Send as documents array for the /index endpoint
+      })
+    });
 
-      if (response.ok) {
-        const data = await response.json();
-        setMessages(prev => [...prev, { id: Date.now() + 1, text: `Successfully indexed ${data.chunks_processed} book chunks! You can now ask questions about the book content.`, sender: 'bot' }]);
-        localStorage.setItem('bookContentIndexed', 'true');
-      } else {
-        const errorData = await response.json();
-        setMessages(prev => [...prev, { id: Date.now() + 1, text: `Failed to index content. Error: ${errorData.detail || 'Unknown error'}`, sender: 'bot' }]);
-      }
-    } catch (error) {
-      console.error(error);
-      setMessages(prev => [...prev, { id: Date.now() + 1, text: "Error indexing content. Please check your backend server.", sender: 'bot' }]);
-    } finally {
-      setIsIndexing(false);
+    if (response.ok) {
+      const data = await response.json();
+      setMessages(prev => [...prev, { id: Date.now() + 1, text: `Successfully indexed ${data.chunks_processed} book chunks! You can now ask questions about the book content.`, sender: 'bot' }]);
+      localStorage.setItem('bookContentIndexed', 'true');
+    } else {
+      const errorData = await response.json();
+      setMessages(prev => [...prev, { id: Date.now() + 1, text: `Failed to index content. Error: ${errorData.detail || 'Unknown error'}`, sender: 'bot' }]);
     }
-  };
+  } catch (error) {
+    console.error(error);
+    setMessages(prev => [...prev, { id: Date.now() + 1, text: "Error indexing content. Please check your backend server.", sender: 'bot' }]);
+  } finally {
+    setIsIndexing(false);
+  }
+};
 
   const handleKeyPress = e => {
     if (e.key === 'Enter' && !e.shiftKey) {
