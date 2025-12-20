@@ -1,5 +1,6 @@
 import { useState } from 'react';
                       
+
 const API_BASE_URL = "https://mariamohsin-rag-baknd.hf.space/chat";       
 
 export default function ChatbotWidget() {
@@ -28,7 +29,7 @@ export default function ChatbotWidget() {
     setIsLoading(true);
 
     try {
-      const response = await fetch(`${API_BASE_URL}/chat`, {
+      const response = await fetch(`${API_BASE_URL}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ query: inputValue, selected_text: '' })
