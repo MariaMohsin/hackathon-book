@@ -9,8 +9,8 @@ export default function ChatbotWidget() {
   const [isLoading, setIsLoading] = useState(false);
   const [isIndexing, setIsIndexing] = useState(false);
 
-  // Use environment-based backend URL with fallback to Hugging Face Space
-  const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || 'https://mariamohsin-rag-baknd.hf.space';
+  // Use a constant backend URL - you can change this to your deployed backend URL
+  const BACKEND_URL = 'https://mariamohsin-rag-baknd.hf.space'; // Change this to your actual backend URL
 
   const toggleMinimize = () => setIsMinimized(!isMinimized);
 
@@ -26,7 +26,7 @@ export default function ChatbotWidget() {
       const response = await fetch(`${BACKEND_URL}/chat`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ 
+        body: JSON.stringify({
           query: inputValue,
           temperature: 0.3,
           max_tokens: 500
